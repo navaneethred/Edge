@@ -1,0 +1,53 @@
+/* Dark mode overrides for Edge theme */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    /* Text & tokens */
+    --color-primary-text: #e5e7eb; /* overrode from vars.css */
+    --color-white: #111317; /* used by .post-lightbox and possibly other tokens */
+    --color-darker-gray: #9aa3ad; /* used by pswp caption */
+  }
+
+  html, body {
+    background: #0b0d11;
+    color: var(--color-primary-text);
+  }
+
+  .site,
+  .site-content {
+    background: transparent;
+  }
+
+  /* Header & footer inherit text color */
+  .gh-head,
+  .gh-foot {
+    background: transparent;
+    color: var(--color-primary-text);
+  }
+  .gh-head a,
+  .gh-foot a {
+    color: inherit;
+  }
+
+  /* Article content */
+  .gh-article-title,
+  .gh-article-excerpt,
+  .gh-content {
+    color: var(--color-primary-text);
+  }
+
+  /* Feed card: lightbox button */
+  .post-lightbox {
+    background-color: #111317;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  /* PhotoSwipe overlay & caption */
+  .pswp__bg {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .pswp__caption__center {
+    color: var(--color-primary-text);
+  }
+}
